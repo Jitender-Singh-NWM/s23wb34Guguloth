@@ -31,6 +31,11 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+let query = req.query
+console.log(`rows ${query.rows}`)
+console.log(`cols ${query.cols}`)
+
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
