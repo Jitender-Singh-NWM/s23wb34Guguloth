@@ -31,9 +31,7 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-let query = req.query
-console.log(`rows ${query.rows}`)
-console.log(`cols ${query.cols}`)
+
 
 
 // error handler
