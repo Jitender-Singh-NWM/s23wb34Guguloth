@@ -2,19 +2,22 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
-  p Pug is amazing.
-  button(class="btn btn-primary" onClick='doReduce()')#name Press Me
-  div(id="reduce") Reduce the value
-  //#reduce Reduce the value
-  script. 
-        var count =20;
-        var change =-1;
-        function doReduce(){
-          var res=count+change;
-          res=res-1;
-          document.getElementById("reduce").innerHTML =res;
-          
-        }
+  - 
+    let results=[];
+    var Dog={};
+    Dog.Breed='Pug';
+    Dog.Dimension='Small';
+    Dog.value=50;
+    results.push(Dog);
+    var Dog1={};
+    Dog.Breed='Pomerian';
+    Dog.Dimension='Medium';
+    Dog.value=25;
+    results.push(Dog1);
+    var Dog={};
+    Dog.Breed='Lab';
+    Dog.Dimension='Larg';
+    Dog.value=100;
+    results.push(Dog2);
 
        
