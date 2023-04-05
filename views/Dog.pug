@@ -23,8 +23,18 @@ block content
   -Dog2.value=100;
   -results.push(Dog2);
   
+  div(class="container-fluid")
+  div(class="row")
+   each b,index  in results
+    div(class="col-sm-2" onclick =`buy(${index})`) #{b.Breed}, #{b.Dimension}, #{b.value}
+    script.
+        function buy(a)
+        {
+            alert(`You purchased Item ${a+1}`)
+        } 
 
-   div(class='container-fluid')
+
+  // div(class='container-fluid')
     div(class='row')
      div(class='Dog1') Dog one Details
        p Breed #{results[0].Breed}
@@ -39,7 +49,7 @@ block content
      div(class='Dog1') Dog Two Details
        p Breed #{results[1].Breed}
        p Size #{results[1].Dimension}
-       p Price #{results[1].value}  
+       p Price #{results[1].value}  //
      
 
 
