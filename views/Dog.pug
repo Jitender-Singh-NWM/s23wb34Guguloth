@@ -2,8 +2,11 @@ extends layout
 
 block content
   h1= title
-  - 
-    let results=[];
+   
+
+   
+  
+  - let results=[];
     var Dog={};
     Dog.Breed='Pug';
     Dog.Dimension='Small';
@@ -19,5 +22,13 @@ block content
     Dog.Dimension='Larg';
     Dog.value=100;
     results.push(Dog2);
+
+   div(class='container-fluid') Reduce the value
+   div(class='row')
+
+   -var list = results;
+    each item in list
+    div(class='col-sm-2') #{item}
+    
 
        
